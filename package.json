@@ -1,0 +1,35 @@
+{
+  "name": "@codekraft-studio/vue-context-menu",
+  "description": "Functional and customizable context menu for VueJs",
+  "version": "0.1.0",
+  "main": "dist/VueContextMenu.umd.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name VueContextMenu src/components/index.js",
+    "build:demo": "vue-cli-service build --mode demo --dest demo",
+    "publish:demo": "git subtree push --prefix demo origin gh-pages",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
