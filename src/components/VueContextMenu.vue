@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    open(e, ...data) {
+    open(e, data = {}) {
       e.preventDefault()
       if (this.visible) {
         this.close()
@@ -35,11 +35,9 @@ export default {
 
       this.eX = e.x
       this.eY = e.y
-      this.context = data.length === 1 ?
-        data[0] :
-        data
-
+      this.context = data
       this.visible = true
+
       this.$nextTick(() => {
         let top = e.y
         let left = e.x
@@ -50,7 +48,6 @@ export default {
         if (top > largestHeight) {
           top = largestHeight;
         }
-
         if (left > largestWidth) {
           left = largestWidth;
         }
